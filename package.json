@@ -1,0 +1,31 @@
+{
+	"name": "cryptostorage",
+	"description": "Custom Encrypted Storage Engine for Multer middleware.",
+	"version": "1.0.0",
+	"contributors": [
+	  "Evan Stawnyczy <evan.stawnyczy@aol.com>",
+	],
+	"license": "MIT",
+	"repository": "",
+	"keywords": [
+	  "form",
+	  "post",
+	  "multipart",
+	  "form-data",
+	  "formdata",
+	  "express",
+	  "middleware",
+	  "secure",
+	  "encrypted",
+	  "AES"
+	],
+	"dependencies": {},
+	"devDependencies": {},
+	"engines": {
+	  "node": ">= 0.10.0"
+	},
+	"files": [
+	  "LICENSE",
+	  "index.js"
+	]
+  }
