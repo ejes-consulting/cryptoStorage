@@ -75,6 +75,7 @@ cryptoStorage accepts an `options` object, in most cases you will not need to mo
 Note: By default, cryptoStorage will use the "aes-256-cbc" cipher, with a 32 byte key length, and a 16 byte IV length.
 
 Key | Description | Note
+--- | --- | ---
 `algorithm` | This is the cipher used, defaults to aes-256-cbc |
 `salt` | This is the number of bytes that are, by default, used as a salt to generate a random filename |
 `compress` | A compression stream.  defaults to zlib.createGzip |
