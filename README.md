@@ -30,7 +30,7 @@ app.post('/save', function (req, res) {
     }
     // Everything went fine.
 
-	// req.files=[{
+	// req.file=[{
 	// 		fieldname:'private',
 	// 		originalname:'original filename.txt', 
 	// 		encoding:'binary',
