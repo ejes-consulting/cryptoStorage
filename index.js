@@ -42,7 +42,7 @@ cryptoStorage.prototype._handleFile=function(req,file,then){
 			compress=options.compress();
 
 
-		if(options.compress) {
+		if(typeof options.compress==='function') {
 			pipeline=[file.stream,compress,cipherStream,outStream];
 		} else {
 			pipeline=[file.stream,cipherStream,outStream];
