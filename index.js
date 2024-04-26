@@ -11,10 +11,10 @@ const settings={
 	salt:12,
 	compress:zlib.createGzip,
 	getDestination:(__req,__file,then)=>then(null,os.tmpdir()),
-	randomFile:()=>{
+	randomFile:(dir)=>{
 		let hash=crypto.createHash('sha256');
 		hash.update(crypto.randomBytes(settings.salt));
-		return hash.digest('hex');
+		return path.format({dir:dir,name:hash.digest('hex')});
 	}
 };
 
@@ -33,7 +33,7 @@ cryptoStorage.prototype._handleFile=function(req,file,then){
 			return;
 		}
 
-		let filename=path.format({dir:dir,name:settings.randomFile()}),
+		let filename=settings.randomFile(dir),
 			pipeline=[],
 			key=crypto.randomBytes(settings.keylen),
 			iv=crypto.randomBytes(settings.ivlen),
