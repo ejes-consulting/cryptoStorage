@@ -39,7 +39,7 @@ cryptoStorage.prototype._handleFile=function(req,file,then){
 			iv=crypto.randomBytes(settings.ivlen),
 			cipherStream=crypto.createCipheriv(settings.algorithm,key,iv),
 			outStream=fs.createWriteStream(filename),
-			compress=settings.compress();
+			compress=(typeof settings.compress==='function')?settings.compress():false;
 
 
 		if(settings.compress) {
